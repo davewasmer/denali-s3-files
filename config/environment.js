@@ -1,6 +1,8 @@
+import assert from 'assert';
+
 export default function environmentConfig(environment, appConfig) {
-  
-  appConfig.denali-s3-files = {
-  
-  };
+
+  assert(appConfig.files, 'Missing files config object!');
+  assert(appConfig.files.store, 'Missing file store config!');
+
 }
